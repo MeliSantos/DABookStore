@@ -8,3 +8,32 @@ header{
 .background{
     background-color: #05171e;
 }
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding-left: 12px;
+}
+.bookLogo{
+    height: 50px;
+    width: 50px;
+}
+.DA{
+    color: rgb(255, 167, 4);
+    font-size: 26px;
+    font-weight: bold;
+}
+.footer{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bookBox{
+    padding: 50px;
+    background-color: rgb(25, 25, 88);
+    margin: 20px;
+}
+
