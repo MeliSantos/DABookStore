@@ -36,4 +36,6 @@ header{
     background-color: rgb(25, 25, 88);
     margin: 20px;
 }
-
+table{
+    text-align: left;
+}

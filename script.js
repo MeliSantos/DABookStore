@@ -184,7 +184,7 @@ function bookList() {
         let publishedYear = books[index].publishedYear;
         let genre = books[index].genre;
         let comments = books[index].comments.name;
-        
+
         list.push(name, author, price, publishedYear, genre, comments);
         listRef.innerHTML += listTemplate(index);
     }
@@ -196,29 +196,36 @@ bookList();
 function listTemplate(index) {
     return `<div class="bookBox" >
                 <h2>${books[index].name}</h2>
+                <div class="line"></div>
                  <p class="DA">${books[index].price.toFixed(2)}€ </p>
                  <table>
                    <tr>
-                    <th>Author: </th>
-                    <td> ${books[index].author} </td>
+                    <th>Author </th>
+                    <td>: ${books[index].author} </td>
                    </tr>
-                 </table>
+                    <tr>
+                    <th>Published year </th>
+                    <td>: ${books[index].publishedYear}</td>
+                   </tr>
+                    <tr>
+                    <th>Genre </th>
+                    <td>: ${books[index].genre}</td>
+                    </tr>
+            </table>
+            <div class="line"></div>
+                
+                <h3> Comments: </h3>
+               
                  <table>
-                <tr>
-                    <th>Published year: </th>
-                    <td>${books[index].publishedYear}</td>
-            </tr>
-            </table>
-             <table>
-                <tr>
-                    <th>Genre: </th>
-                    <td> ${books[index].genre}</td>
-            </tr>
-            </table>
-                
-                <p> </p>
-                <p>${books[index].comments.name} </p>
-                
+                   <tr>
+                    <th>${books[index].comments.name} </th>
+                    <td> : ${books[index].comments.comment} </td>
+                   </tr> 
+                   </table>
+                   <input type="text" id="commentInput">
+                   <button onclick="" ></button>
+                   
+           
             </div>`;
 }
 
